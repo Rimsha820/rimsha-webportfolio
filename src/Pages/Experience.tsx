@@ -100,7 +100,7 @@ const Experience: React.FC = () => {
 
         <div className="relative ml-4 md:ml-1">
           {/* Vertical timeline line */}
-          <div className="absolute left-[18px] top-[64px] bottom-[160px] max-[360px]:bottom-[300px] sm:bottom-[60px] md:bottom-[104px] w-1 bg-[#ecce0e] z-0" />
+          <div className="absolute left-[18px] top-[64px] bottom-[160px] max-[360px]:bottom-[400px] sm:bottom-[60px] md:bottom-[104px] w-1 bg-[#ecce0e] z-0" />
 
           {projects.map((project, index) => (
             <motion.div

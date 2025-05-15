@@ -20,6 +20,8 @@ const roles = ["Front-end Developer!"];
 
 const Banner: React.FC<BannerProps> = ({ onClick, id }) => {
   const [currentRole, setCurrentRole] = useState(0);
+  const [imgLoaded, setImgLoaded] = useState(false);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -102,19 +104,21 @@ const Banner: React.FC<BannerProps> = ({ onClick, id }) => {
         </motion.div>
 
         {/* Image Section */}
-        <motion.div
-          className="flex-1 flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1 }}
-        >
-          <img
-            src={h2}
-            alt="Home"
-            className="w-[350px] md:w-[400px] lg:w-[550px] max-w-[90%] h-auto"
-          />
-        </motion.div>
+<motion.div
+  className="flex-1 flex justify-center"
+  initial={{ opacity: 0, x: 50 }}
+  animate={imgLoaded ? { opacity: 1, x: 0 } : {}}
+  transition={{ duration: 1 }}
+>
+  <img
+    src={h2}
+    alt="Home"
+    onLoad={() => setImgLoaded(true)}
+    loading="eager"
+    className="w-[350px] md:w-[400px] lg:w-[550px] max-w-[90%] h-auto"
+  />
+</motion.div>
+
       </div>
 
       {/* Mobile Development Section */}
@@ -199,6 +203,7 @@ const Banner: React.FC<BannerProps> = ({ onClick, id }) => {
           >
             <img
               src={frontendImg}
+              // loading="eager"
               alt="Front-end development"
               className="w-[300px] md:w-[700px] h-auto object-contain"
             />
