@@ -94,13 +94,13 @@ const Experience: React.FC = () => {
 
       {/* Timeline Section */}
       <div className="w-full px-4 sm:px-10 md:px-20 md:py-10 lg:w-300">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#200f60] mb-18">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#200f60] mb-18">
           My Work .
         </h2>
 
         <div className="relative ml-4 md:ml-1">
           {/* Vertical timeline line */}
-          <div className="absolute left-[18px] top-[64px] bottom-[160px] max-[360px]:bottom-[400px] sm:bottom-[60px] md:bottom-[104px] w-1 bg-[#ecce0e] z-0" />
+<div className="absolute left-[18px] top-[64px] bottom-[160px] sm:bottom-[60px] md:bottom-[104px] max-[360px]:bottom-[300px] w-1 bg-[#ecce0e] z-0" />
 
           {projects.map((project, index) => (
             <motion.div
