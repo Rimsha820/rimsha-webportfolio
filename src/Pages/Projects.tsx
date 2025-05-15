@@ -6,7 +6,7 @@ import JSLogo from "../assets/Js.webp";
 import ReactLogo from "../assets/react.svg";
 import ReduxLogo from "../assets/redux.svg";
 import { PiStarFill } from "react-icons/pi";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 const Projects: React.FC = () => {
   const techStackIcons = [HTMLLogo, TailwindLogo, JSLogo, ReactLogo, ReduxLogo];
@@ -93,8 +93,8 @@ const Projects: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="bg-[#f0ede8] shadow-lg p-6 rounded-lg text-left w-full"
             >
-              <h4 className="text-xl sm:text-2xl font-bold mb-2 text-black flex items-center gap-3 sm:gap-4">
-                <PiStarFill className="text-yellow-500" />
+              <h4 className="text-lg sm:text-2xl font-bold mb-2 text-black flex items-start gap-3 sm:gap-4">
+                <PiStarFill className="text-yellow-500 text-xl sm:text-2xl flex-shrink-0 mt-1" />
                 {project.title}
               </h4>
 
@@ -133,8 +133,8 @@ const Projects: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="bg-[#f0ede8] shadow-lg p-6 rounded-lg text-left w-full md:w-[45%] max-w-[600px]"
               >
-                <h4 className="text-xl sm:text-2xl font-bold mb-2 text-black flex items-center gap-3 sm:gap-4">
-                  <PiStarFill className="text-yellow-500" />
+                <h4 className="text-lg sm:text-2xl font-bold mb-2 text-black flex items-start gap-3 sm:gap-4">  ``
+                  <PiStarFill className="text-yellow-500 text-xl sm:text-2xl flex-shrink-0 mt-1" />
                   {project.title}
                 </h4>
 
